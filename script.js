@@ -9,7 +9,7 @@ function search(str) {
     let results = [];
     if (str != "") {
         fruit.forEach((val) => {
-            if (val.toLocaleLowerCase().includes(str)) {
+            if (val.toLowerCase().includes(str)) {
                 results.push(val);
             }
         });
@@ -24,7 +24,7 @@ function searchHandler(e) {
         return;
     }
     inputVal = input.value;
-    let searchResults = search(inputVal.toLocaleLowerCase());
+    let searchResults = search(inputVal.toLowerCase());
     showSuggestions(searchResults, inputVal);
 }
 
